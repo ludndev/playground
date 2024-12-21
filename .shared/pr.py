@@ -91,6 +91,7 @@ def main():
     pr_body = ""
     pr_body += f"# Changes from `{current_branch}` to `{destination_branch}`\n\n"
     pr_body += f"## Commit{'s' if len(commits) > 1 else ''} Overview: \n\n"
+    pr_body += pr_template
 
     print(pr_body)
 

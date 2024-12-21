@@ -57,7 +57,7 @@ def format_commit(commit):
     # Check if commit references an issue
     issue_references = check_commit_for_issue(commit['message'])
 
-    formatted_commit = f"- `{commit['sha'][:7]}` {commit['message']}"
+    formatted_commit = f"- {commit['sha'][:7]} **{commit['message']}**"
 
     if issue_references:
         formatted_commit += f" (References Issue(s): #{', '.join(issue_references)})"
